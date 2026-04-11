@@ -318,6 +318,162 @@
       margin: 1.5rem auto 0;
     }
 
+    /* ── LIVE SIGNAL ── */
+    .live-signal {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 1.25rem 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.7s forwards;
+    }
+
+    .live-signal .container-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem 2rem;
+    }
+
+    .signal-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: #2ecc71;
+      border-radius: 50%;
+      margin-right: 0.4rem;
+      animation: pulse 2s infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .signal-stat {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--cream);
+      opacity: 0.85;
+    }
+
+    .signal-stat strong {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .signal-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: #2ecc71;
+      color: var(--ink);
+      padding: 0.2rem 0.5rem;
+      font-weight: 500;
+    }
+
+    .signal-review {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+    }
+
+    /* ── PARTICIPATE ── */
+    .participate-section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--rule);
+      opacity: 0;
+      animation: fadeUp 0.7s ease 1.25s forwards;
+      text-align: center;
+    }
+
+    .participate-heading {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .participate-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: var(--mid);
+      margin-bottom: 1.25rem;
+    }
+
+    .participate-link {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: var(--rust);
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .participate-link:hover {
+      opacity: 0.85;
+    }
+
+    /* ── CTA BUTTONS ── */
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .cta-btn {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.9rem 1.25rem;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      background: transparent;
+      text-align: center;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .cta-btn:hover {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .cta-btn.primary {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .cta-btn.primary:hover {
+      background: var(--mid);
+    }
+
+    @media (min-width: 480px) {
+      .cta-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .cta-btn {
+        flex: 1;
+        min-width: 160px;
+        max-width: 220px;
+      }
+    }
+
     /* ── FOOTER ── */
     footer {
       border-top: 2px solid var(--ink);
@@ -377,15 +533,24 @@
     <p class="hero-subtitle">Awards for Corporate Contradictions</p>
   </section>
 
+  <!-- LIVE SIGNAL -->
+  <div class="live-signal">
+    <div class="container-inner">
+      <span class="signal-badge"><span class="signal-dot"></span>Active Pattern</span>
+      <span class="signal-stat"><strong>17</strong> cases tracked (last 30 days)</span>
+      <span class="signal-review">3 new cases under review</span>
+    </div>
+  </div>
+
   <!-- AWARD BLOCK -->
   <div class="container">
     <section class="award-section">
       <p class="award-category">This Year's Award</p>
       <h2 class="award-heading">🏆 The Glass Onion Award</h2>
       <div class="award-statement">
-        <p class="statement-claim">"We care deeply about our people"</p>
+        <p class="statement-claim">"We care deeply about our people."</p>
         <span class="statement-arrow">↓ &nbsp;followed by</span>
-        <p class="statement-result">Layoffs within weeks</p>
+        <p class="statement-result">"We've made the difficult decision…"</p>
       </div>
     </section>
 
@@ -417,14 +582,25 @@
 
     <!-- PATTERN LINE -->
     <section class="pattern-section">
-      <p class="pattern-text">This isn't a one-off. This pattern is being seen across companies.</p>
+      <p class="pattern-text">This isn't a one-off. It's a repeatable pattern.</p>
+    </section>
+
+    <!-- PARTICIPATION HOOK -->
+    <section class="participate-section">
+      <p class="participate-heading">Seen this happen?</p>
+      <p class="participate-sub">Submit a case — anonymously if preferred.</p>
+      <a class="participate-link" href="mailto:cases@bloggiesawards.com">Submit a Case</a>
     </section>
 
     <!-- CTA -->
     <section class="cta-section">
-      <p class="cta-eyebrow">Coming Soon</p>
+      <p class="cta-eyebrow">What's Next</p>
       <p class="cta-text">Full breakdown of patterns and signals coming soon.</p>
-      <div class="cta-rule"></div>
+      <div class="cta-buttons">
+        <a class="cta-btn primary" href="#">View Full Breakdown</a>
+        <a class="cta-btn" href="#">Submit Priority Case</a>
+        <a class="cta-btn" href="#">Company Response / Clarification</a>
+      </div>
     </section>
   </div>
 
