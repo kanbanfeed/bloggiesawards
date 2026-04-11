@@ -602,7 +602,637 @@
         <a class="cta-btn" href="#">Company Response / Clarification</a>
       </div>
     </section>
+  </div><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Bloggies — Awards for Corporate Contradictions</title>
+  <meta name="description" content="The Bloggies: Awards for Corporate Contradictions. Recognizing the gap between what companies say and what they do." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --cream: #f5f0e8;
+      --ink: #1a1410;
+      --rust: #c0392b;
+      --gold: #b8913a;
+      --mid: #5a5046;
+      --rule: #d4c9b0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      border-bottom: 2px solid var(--ink);
+      padding: 0.5rem 1.5rem;
+      text-align: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.1s forwards;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 3.5rem 1.5rem 3rem;
+      text-align: center;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 2.5rem;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.5s ease 0.2s forwards;
+    }
+
+    .hero-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.5s ease 0.3s forwards;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(3.2rem, 14vw, 7rem);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.4s forwards;
+    }
+
+    .hero-divider {
+      width: 3rem;
+      height: 1px;
+      background: var(--gold);
+      margin: 1.25rem auto;
+      opacity: 0;
+      animation: fadeUp 0.5s ease 0.5s forwards;
+    }
+
+    .hero-subtitle {
+      font-family: 'DM Mono', monospace;
+      font-size: clamp(0.65rem, 2.5vw, 0.8rem);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mid);
+      opacity: 0;
+      animation: fadeUp 0.5s ease 0.6s forwards;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ── AWARD BLOCK ── */
+    .award-section {
+      padding: 3.5rem 0 2.5rem;
+      border-bottom: 1px solid var(--rule);
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.8s forwards;
+    }
+
+    .award-category {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 0.75rem;
+    }
+
+    .award-heading {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      color: var(--ink);
+      margin-bottom: 2.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .award-statement {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 1.75rem 1.5rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    .award-statement::before {
+      content: 'AWARD CITATION';
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .statement-claim {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+      color: var(--cream);
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+    }
+
+    .statement-arrow {
+      display: block;
+      color: var(--rust);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      margin: 0.75rem 0;
+    }
+
+    .statement-result {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+      color: var(--rust);
+      line-height: 1.3;
+    }
+
+    /* ── BULLETS ── */
+    .bullets-section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--rule);
+      opacity: 0;
+      animation: fadeUp 0.7s ease 1s forwards;
+    }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 1.25rem;
+    }
+
+    .bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .bullet-list li {
+      display: grid;
+      grid-template-columns: 1rem 1fr;
+      gap: 0.75rem;
+      align-items: start;
+      font-size: 0.95rem;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    .bullet-list li::before {
+      content: '—';
+      color: var(--gold);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      margin-top: 0.15rem;
+    }
+
+    /* ── SOCIAL PROOF ── */
+    .voices-section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--rule);
+      opacity: 0;
+      animation: fadeUp 0.7s ease 1.1s forwards;
+    }
+
+    .voices-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .voice-card {
+      border-left: 2px solid var(--rust);
+      padding: 0.75rem 1rem;
+      background: rgba(192, 57, 43, 0.04);
+    }
+
+    .voice-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    /* ── PATTERN LINE ── */
+    .pattern-section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--rule);
+      opacity: 0;
+      animation: fadeUp 0.7s ease 1.2s forwards;
+    }
+
+    .pattern-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
+      line-height: 1.5;
+      color: var(--ink);
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      text-align: center;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      padding: 3rem 0 4rem;
+      text-align: center;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 1.3s forwards;
+    }
+
+    .cta-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .cta-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+      color: var(--mid);
+      max-width: 420px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .cta-rule {
+      width: 2rem;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.5rem auto 0;
+    }
+
+    /* ── LIVE SIGNAL ── */
+    .live-signal {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 1.25rem 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.7s forwards;
+    }
+
+    .live-signal .container-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem 2rem;
+    }
+
+    .signal-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: #2ecc71;
+      border-radius: 50%;
+      margin-right: 0.4rem;
+      animation: pulse 2s infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .signal-stat {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--cream);
+      opacity: 0.85;
+    }
+
+    .signal-stat strong {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .signal-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: #2ecc71;
+      color: var(--ink);
+      padding: 0.2rem 0.5rem;
+      font-weight: 500;
+    }
+
+    .signal-review {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+    }
+
+    /* ── PARTICIPATE ── */
+    .participate-section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--rule);
+      opacity: 0;
+      animation: fadeUp 0.7s ease 1.25s forwards;
+      text-align: center;
+    }
+
+    .participate-heading {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .participate-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: var(--mid);
+      margin-bottom: 1.25rem;
+    }
+
+    .participate-link {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: var(--rust);
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .participate-link:hover {
+      opacity: 0.85;
+    }
+
+    /* ── CTA BUTTONS ── */
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .cta-btn {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.9rem 1.25rem;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      background: transparent;
+      text-align: center;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .cta-btn:hover {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .cta-btn.primary {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .cta-btn.primary:hover {
+      background: var(--mid);
+    }
+
+    .cta-tension {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--rust);
+      margin: 1.25rem auto 0;
+      max-width: 400px;
+      line-height: 1.5;
+    }
+
+    .cta-btn.highlight {
+      border-color: var(--rust);
+      color: var(--rust);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+    }
+
+    .cta-btn.highlight:hover {
+      background: var(--rust);
+      color: var(--cream);
+    }
+
+    @media (min-width: 480px) {
+      .cta-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .cta-btn {
+        flex: 1;
+        min-width: 160px;
+        max-width: 220px;
+      }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 2px solid var(--ink);
+      padding: 1rem 1.5rem;
+      text-align: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mid);
+    }
+
+    /* ── ANIMATION ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (min-width: 640px) {
+      .voices-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .hero {
+        padding: 5rem 2rem 4rem;
+      }
+
+      .award-section,
+      .bullets-section,
+      .voices-section,
+      .pattern-section,
+      .cta-section {
+        padding-top: 3.5rem;
+        padding-bottom: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="masthead">Est. 2025 &nbsp;·&nbsp; Recognizing Corporate Contradictions &nbsp;·&nbsp; bloggiesawards.com</div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-label">Annual Recognition</p>
+    <h1 class="hero-title">THE<br>BLOGGIES</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-subtitle">Awards for Corporate Contradictions</p>
+  </section>
+
+  <!-- LIVE SIGNAL -->
+  <div class="live-signal">
+    <div class="container-inner">
+      <span class="signal-badge"><span class="signal-dot"></span>Active Pattern</span>
+      <span class="signal-stat"><strong>17</strong> cases tracked (last 30 days)</span>
+      <span class="signal-review">3 new cases under review</span>
+    </div>
   </div>
+
+  <!-- AWARD BLOCK -->
+  <div class="container">
+    <section class="award-section">
+      <p class="award-category">This Year's Award</p>
+      <h2 class="award-heading">🏆 The Glass Onion Award</h2>
+      <div class="award-statement">
+        <p class="statement-claim">"We care deeply about our people."</p>
+        <span class="statement-arrow">↓ &nbsp;followed by</span>
+        <p class="statement-result">"We've made the difficult decision…"</p>
+      </div>
+    </section>
+
+    <!-- BULLETS -->
+    <section class="bullets-section">
+      <p class="section-label">What This Looks Like</p>
+      <ul class="bullet-list">
+        <li>Public messaging emphasizes empathy</li>
+        <li>Workforce reductions follow shortly after</li>
+        <li>Employees experience a gap between narrative and reality</li>
+      </ul>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="voices-section">
+      <p class="section-label">Voices on the Ground</p>
+      <div class="voices-grid">
+        <div class="voice-card">
+          <p class="voice-text">"Felt like a betrayal"</p>
+        </div>
+        <div class="voice-card">
+          <p class="voice-text">"Messaging doesn't match decisions"</p>
+        </div>
+        <div class="voice-card">
+          <p class="voice-text">"Trust is broken"</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PATTERN LINE -->
+    <section class="pattern-section">
+      <p class="pattern-text">This isn't a one-off. It's a repeatable pattern.</p>
+    </section>
+
+    <!-- PARTICIPATION HOOK -->
+    <section class="participate-section">
+      <p class="participate-heading">Seen this happen?</p>
+      <p class="participate-sub">Submit a case — anonymously if preferred.</p>
+      <a class="participate-link" href="/cdn-cgi/l/email-protection#e78486948294a7858b8880808e8294869086958394c984888a">Submit a Case</a>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <p class="cta-eyebrow">What's Next</p>
+      <p class="cta-text">Full breakdown of patterns and signals coming soon.</p>
+      <p class="cta-tension">If you're seeing this before making a decision, don't ignore it.</p>
+      <div class="cta-buttons">
+        <a class="cta-btn primary" href="#">See What This Means Before You Join</a>
+        <a class="cta-btn highlight" href="#">Submit a Case (Get Priority Review)</a>
+        <a class="cta-btn" href="#">Official Company Response</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 The Bloggies &nbsp;·&nbsp; b
 
   <footer>
     &copy; 2025 The Bloggies &nbsp;·&nbsp; bloggiesawards.com
